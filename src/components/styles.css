@@ -247,4 +247,31 @@ h1, h2 {
     .certificate-card {
       padding: 15px;
     }
+
+    .blog-details {
+      margin-top: 20px;
+    }
+    
+    .blog-details p {
+      margin-bottom: 15px;
+      line-height: 1.7;
+      font-size: 16px;
+      color: #333;
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeInUp 0.6s forwards;
+    }
+    
+    .blog-details p:nth-child(1) { animation-delay: 0.2s; }
+    .blog-details p:nth-child(2) { animation-delay: 0.4s; }
+    .blog-details p:nth-child(3) { animation-delay: 0.6s; }
+    .blog-details p:nth-child(4) { animation-delay: 0.8s; }
+    .blog-details p:nth-child(5) { animation-delay: 1s; }
+    
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   }

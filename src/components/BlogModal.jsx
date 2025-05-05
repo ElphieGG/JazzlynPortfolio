@@ -1,5 +1,3 @@
-// BlogModal.jsx
-
 import React, { useState } from "react";
 import "./styles.css";
 
@@ -11,7 +9,15 @@ const BlogModal = ({ blog, onClose }) => {
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <button className="close-button" onClick={onClose}>×</button>
         <h2>{blog.day}: {blog.title}</h2>
-        <p>{blog.details}</p>
+        <p><strong>Date:</strong> {blog.date}</p>
+
+        <div className="blog-details">
+          {blog.details.split('. ').map((paragraph, index) => (
+            <p key={index} className="paragraph-fade">
+              {paragraph.trim()}.
+            </p>
+          ))}
+        </div>
 
         <div className="images-gallery">
           {blog.images.map((img, index) => (
