@@ -1,0 +1,162 @@
+.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px 60px;
+  background-color:rgb(135, 196, 246);
+  position: fixed;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.logo img {
+  height: 40px;
+  width: auto;
+  background-color: transparent;
+}
+
+
+.logo {
+  background-color: transparent;
+}
+
+.nav {
+  background-color: transparent;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.nav ul li a {
+  background-color: transparent;
+
+}
+
+.nav ul li a {
+  text-decoration: none;
+  /* color: black; */
+  color: rgb(59, 13, 198);
+  transition: color 0.3s ease-in-out;
+}
+
+.nav ul li a:hover {
+  color:  #f5f5f7;
+  font:bold;
+}
+
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon .bar {
+  background-color: black;
+  height: 4px;
+  width: 30px;
+  margin: 5px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 20px; 
+  }
+
+  .logo img {
+      height: 50px; 
+  }
+
+  .menu-icon {
+      display: flex;
+  }
+
+
+  .nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+     right: 0;
+      width: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      top: 60px;
+      right: 0;
+      width: 50%;
+      background-color: #f3f3f3;
+
+  }
+
+  .nav.active {
+      display: flex;
+  }
+
+  .nav ul li {
+    font-size: 12px; /* reduced from 18px to 14px */
+    font-weight: 600;
+  }
+  
+  .nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: color 0.3s ease-in-out;
+    font-size: 14px; /* make sure the link text is also small */
+  }
+  
+  .nav-icon {
+    color: #e74c3c;
+    font-size: 14px; /* make icons slightly smaller to match text */
+  }
+  
+  .nav ul li a:hover {
+    color: #e74c3c;
+  }
+  .menu-icon {
+      display: flex;
+  }
+
+  .nav ul li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav ul li a:hover {
+    color: #e74c3c; /* Nice red color like your sample */
+  }
+  
+  .nav-icon {
+    color: #e74c3c;
+    font-size: 12px;
+  }
+  
+  @media (max-width: 768px) {
+    .nav ul li a {
+      justify-content: center;
+    }
+  }
+
+}

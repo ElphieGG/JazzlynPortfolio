@@ -1,0 +1,329 @@
+.experience {
+    padding: 60px 20px;
+    background-color: #f5f8fa;
+    min-height: 100vh;
+}
+
+.experience-title {
+    padding-top: 220px;
+    text-align: center;
+    font-size: 60px;
+    color: #6a5acd;
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-family: "Eyesome Duo Script", cursive;
+}
+
+/* .experience-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+} */
+
+.experience-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+  .experience-cards {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .experience-cards {
+      grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.experience-card {
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.experience-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.icon-container {
+    margin-bottom: 15px;
+}
+
+.icon-container svg {
+    font-size: 40px;
+}
+
+.experience-card h2 {
+    color: #0d6efd;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.experience-card h3 {
+    color: #444;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.experience-card .duration {
+    color: #888;
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.experience-card p {
+    color: #555;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+/* Fade in animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Extra Large desktop */
+@media (min-width: 1400px) {
+    .experience-cards {
+        max-width: 1400px;
+        gap: 40px;
+    }
+
+    .experience-card {
+        max-width: 450px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 991px) {
+    .experience-title {
+        font-size: 3rem;
+        padding-top: 80px;
+    }
+
+    .experience-card {
+        padding: 25px 15px;
+    }
+
+    .icon-container svg {
+        font-size: 35px;
+    }
+
+    .experience-card h2 {
+        font-size: 1.3rem;
+    }
+
+    .experience-card h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Phones (Large phones 600px down to 400px) */
+@media (max-width: 600px) {
+    .experience-title {
+        font-size: 2.4rem;
+        padding-top: 60px;
+    }
+
+    .experience-cards {
+        gap: 20px;
+    }
+
+    .experience-card {
+        padding: 20px 12px;
+    }
+
+    .icon-container svg {
+        font-size: 30px;
+    }
+
+    .experience-card h2 {
+        font-size: 1.2rem;
+    }
+
+    .experience-card h3 {
+        font-size: 1rem;
+    }
+
+    .experience-card p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Extra Small phones (under 400px) */
+@media (max-width: 400px) {
+    .experience-title {
+        font-size: 1.8rem;
+        padding-top: 50px;
+    }
+
+    .experience-card {
+        padding: 15px 10px;
+    }
+
+    .icon-container svg {
+        font-size: 26px;
+    }
+
+    .experience-card h2 {
+        font-size: 1rem;
+    }
+
+    .experience-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .experience-card p {
+        font-size: 0.85rem;
+    }
+
+    .certification-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        max-width: 1100px;
+        margin: 50px auto 0;
+    }
+    
+    @media (max-width: 991px) {
+        .certification-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    @media (max-width: 600px) {
+        .certification-grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    
+    .certification-card {
+        background: linear-gradient(135deg, #f5f5f5, #ececec);
+        border-radius: 15px;
+        padding: 25px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+    }
+    
+    .certification-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+    }
+    
+    .cert-name {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #333;
+    }
+    
+    .cert-icon {
+        font-size: 24px;
+        color: #888;
+    }
+    
+    @media (max-width: 600px) {
+        .cert-name {
+            font-size: 1rem;
+        }
+    
+        .cert-icon {
+            font-size: 20px;
+        }
+    }
+    
+    .experience-card ul {
+        text-align: left;
+        padding-left: 20px;
+    }
+    
+    .experience-card li {
+        color: #555;
+        margin-bottom: 8px;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    
+    /* PRO Animation (slide-up and fade) */
+    .fade-in {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    
+    .fade-in-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    .single-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 100vh;
+        padding-top: 160px; /* Increase padding to clear the fixed navbar */
+    }
+    
+    .single-card .experience-title {
+        font-size: 3rem;
+        margin-bottom: 40px;
+        color: #6a5acd;
+        text-align: center;
+    }
+    
+    
+    .single-card .experience-card {
+        width: 95%;
+        max-width: 1400px;
+        background-color: #fff;
+        padding: 50px 40px;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    
+    
+    .single-card .experience-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+    
+    .single-card .experience-card ul {
+        text-align: left;
+        padding-left: 20px;
+    }
+    
+    .single-card .experience-card li {
+        color: #555;
+        margin-bottom: 12px;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    
+
+}
